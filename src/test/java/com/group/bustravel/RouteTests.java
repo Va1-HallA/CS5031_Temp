@@ -89,6 +89,9 @@ public class RouteTests {
         assertEquals(route.getStopList.get(0).getName(), stopName2);
     }
 
+    /**
+     * test when a route passing through the stop
+     */
     @Test
     void testPassingStopTrue() {
         route.add(stop, stopTime);

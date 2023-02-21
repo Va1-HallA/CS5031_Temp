@@ -79,6 +79,9 @@ public class ModelTests {
                 "Expected DuplicateNameException.");
     }
 
+    /**
+     * test listing routes that passing a stop
+     */
     @Test
     void testListRoutesPassingStop() {
         route.add(stop, stopTime);
@@ -86,6 +89,9 @@ public class ModelTests {
         assertFalse(model.findAllRoutes(stop).contains(route2));
     }
 
+    /**
+     * same test with time arguments
+     */
     @Test
     void testListRoutesPassingStopWithTime() {
         route.add(stop, stopTime);
@@ -93,6 +99,9 @@ public class ModelTests {
         assertFalse(model.findAllRoutes(stop, stopTime.plus(30, ChronoUnit.MINUTES)).contains(route));
     }
 
+    /**
+     * test all serving times for a stop
+     */
     @Test
     void testListAllStopServingTime() {
         route.add(stop, stopTime);
